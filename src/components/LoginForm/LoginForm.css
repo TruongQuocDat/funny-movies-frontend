@@ -1,0 +1,23 @@
+.login-form {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  align-items: center;
+}
+
+.login-form input, .login-form button, .mr-10 {
+  margin-right: 10px;
+}
+
+.user-information {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.userFormButton {
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}

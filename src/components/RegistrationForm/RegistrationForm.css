@@ -1,0 +1,22 @@
+.registrationForm {
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+  }
+  
+  .registrationLabel {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .registrationInput {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+  }
+  
+  .registrationButton {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  

@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +11,140 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  border-bottom: 2px solid #000;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none; /* This removes the underline typically added to links */
+  color: black; /* Or any other color you want for your logo text */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info span {
+  margin-right: 1em;
+}
+
+.share-form {
+  width: 50%;
+  margin: auto;
+  border: 2px solid #000;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 50px;
+}
+
+.share-form h2, .share-form form {
+  text-align: center;
+}
+
+/* Styles for the form elements to make them look better */
+.share-form label, .share-form input, .share-form button {
+  display: block;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+.share-form input, .share-form button {
+  padding: 0.5em;
+}
+
+.share-form button {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  margin-top: 1em; /* Adds a little space above the button */
+}
+
+/* Utility classes for buttons */
+.button {
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #000;
+  color: white;
+  border: none;
+}
+
+.default {
+  background-color: #ccc;
+  color: white;
+  border: none;
+}
+
+.share-form-url {
+  display: flex;
+}
+
+.label-share-url {
+  width: 20%;
+}
+
+/* Base styles for the video list */
+.video-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px 100px;
+}
+
+/* Styles for individual video items */
+.video-item {
+  display: flex;
+  border: 1px solid #ccc;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+.thumbnail {
+  width: 120px;
+  height: 90px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1em;
+}
+
+.thumbnail::after {
+  content: 'Thumbnail';
+}
+
+.video-info {
+  flex-grow: 1;
+  margin-left: 10px;
+  overflow: auto;
+}
+
+.video-info h2 {
+  margin-top: 0;
+  color: rgba(255, 0, 0, 0.599);
+}
+
+.video-info p {
+  margin: 0.5em 0;
+}
+
+.video-info .description {
+  word-break: auto-phrase;
+}
+
+.vote-button {
+  cursor: pointer;
 }
