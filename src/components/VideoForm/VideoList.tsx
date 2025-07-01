@@ -17,6 +17,7 @@ const VideoList: React.FC<VideoListProps> = ({ videos }) => {
       {videos.map((video) => (
         <VideoItem
           key={video.id}
+          id={video.id}
           title={video.title}
           sharedBy={video.user}
           description={video.description}
