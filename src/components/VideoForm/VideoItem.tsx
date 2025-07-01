@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import EmotionButtons from '../EmotionButtons/EmotionButtons';
+import CommentList from '../CommentList/CommentList';
 
 interface VideoItemProps {
+  id: number;
   title: string;
   sharedBy: string;
   description: string;
-  youtubeURL: string
+  youtubeURL: string;
 }
 
-const VideoItem: React.FC<VideoItemProps> = ({ title, sharedBy, description, youtubeURL }) => {
+const VideoItem: React.FC<VideoItemProps> = ({ id, title, sharedBy, description, youtubeURL }) => {
+  const [showComments, setShowComments] = useState(false);
+
   const getYouTubeID = (url: string | undefined | null): string | null => {
     if (typeof url !== 'string') {
       console.error('getYouTubeID was called without a url string:', url);
@@ -40,10 +45,27 @@ const VideoItem: React.FC<VideoItemProps> = ({ title, sharedBy, description, you
         <h2>{title}</h2>
         <p>Shared by: {sharedBy}</p>
         <div className="description">{description}</div>
-        <div className="vote-buttons">
-          <div className="vote-button upvote">{}</div>
-          <div className="vote-button downvote">{}</div>
+        
+        <div className="video-actions">
+          <EmotionButtons 
+            targetType="Video" 
+            targetId={id.toString()}
+            className="video-emotions"
+          />
+          
+          <button 
+            className="toggle-comments-btn"
+            onClick={() => setShowComments(!showComments)}
+          >
+            {showComments ? 'Hide Comments' : 'Show Comments'}
+          </button>
         </div>
+
+        {showComments && (
+          <div className="video-comments">
+            <CommentList videoId={id} />
+          </div>
+        )}
       </div>
     </div>
   );
