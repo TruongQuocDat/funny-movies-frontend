@@ -14,7 +14,7 @@ const VideoItem: React.FC<VideoItemProps> = ({ title, sharedBy, description, you
       return null;
     }
   
-    const regExp = /^.*(youtu\.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/;
+    const regExp = /^.*(youtu\.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#&?]*).*/;
     const match = url.match(regExp);
   
     return match && match[2].length === 11 ? match[2] : null;

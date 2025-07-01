@@ -20,7 +20,7 @@ const RegistrationForm: React.FC = () => {
     if (localStorage.getItem('jwtToken')) {
       navigate('/');
     }
-  }, []);
+  }, [navigate]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
